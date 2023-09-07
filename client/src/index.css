@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+
+/* ---Variable-end-reset--- */
+:root {
+  --cerulean-50: #f0faff;
+  --cerulean-100: #e0f5fe;
+  --cerulean-200: #bae8fd;
+  --cerulean-300: #7dd5fc;
+  --cerulean-400: #38bcf8;
+  --cerulean-500: #0ea5e9;
+  --cerulean-600: #028ac7;
+  --cerulean-700: #0370a1;
+  --cerulean-800: #075e85;
+  --cerulean-900: #0c506e;
+  --cerulean-950: #083549;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.btn-disconnect {
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background: transparent;
+}
+
+body {
+  background-size: cover;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+/* ---End-variable-end-reset--- */
+
+/* ---Navbar--- */
+.navbar {
+  display: flex;
+  background: #0c506e;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.566) 2x 2px 4px,
+    rgba(2, 0, 97, 0.825) 0px 7px 13px;
+}
+
+.nav-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 1120px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav-disconnect {
+  display: flex;
+  gap: 1rem;
+}
+
+.link-to {
+  color: white;
+}
+.nav-link-active {
+  color: yellowgreen;
+  font-size: 1.5rem;
+}
+
+/* ---End-navbar--- */
+
+/* ---Welcome--- */
+.a-propos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+
+  color: white;
+  height: calc(100vh - 364px);
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  background: url(photo-parking.jpg) no-repeat center/cover fixed;
+  height: calc(100vh - 316px);
+}
+
+h1 {
+  font-family: "Goldman", cursive;
+  font-size: 4rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 5px 5px 5px black;
+}
+
+/* ---End-Animation-h1--- */
+
+.a-propos p {
+  color: white;
+  font-family: "Goldman", cursive;
+  text-align: center;
+  font-size: x-large;
+}
+/* ---End-welcome--- */
+
+/* ---My-project--- */
+.project {
+  background: var(--cerulean-950);
+}
+
+.project h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-family: "Goldman", cursive;
+  padding: 30px;
+}
+
+.title-project {
+  padding: 80px 0;
+}
+
+.my-project {
+  text-align: center;
+}
+
+.btn {
+  margin-top: 2rem;
+  border: 1px solid yellowgreen;
+  font-family: "Goldman", cursive;
+  border-radius: 8px;
+  background: white;
+  padding: 10px 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: transparent;
+  color: white;
+}
+
+/* ---CARDS--- */
+.cards {
+  padding-bottom: 20px;
+  display: flex;
+  gap: 5rem;
+}
+.card img {
+  border-radius: 4px;
+  display: block;
+  width: 20rem;
+  height: 15rem;
+  object-fit: cover;
+}
+.card {
+  background-color: #0c506e;
+  padding: 1rem 0.5rem;
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+  border: 1px solid yellowgreen;
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  transition: all 0.7s ease-out;
+  letter-spacing: 1.2px;
+  color: white;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+/* ---END-CARDS--- */
+
+/* ---mobile-view--- */
+@media screen and (max-width: 640px) {
+  .navbar,
+  .cards,
+  .nav-center,
+  .nav-link,
+  h1 {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    justify-items: center;
+    column-gap: 2rem;
+  }
+  .form,
+  .form-control,
+  h1 {
+    overflow: hidden;
+  }
+  .section-contact {
+    position: fixed;
+  }
+}
+/* ---End-mobile-view--- */
+
+/* ---Social-links--- */
+
+.link {
+  display: inline-block;
+  margin-left: 24px;
+  font-size: 2rem;
+  color: white;
+  transition: all 0.7s ease-out;
+}
+
+.link:hover {
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  color: greenyellow;
+}
+#contact {
+  background: #075e85;
+  text-align: center;
+}
+.link-text-contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-family: "Goldman", cursive;
+  padding: 2rem;
+}
+.copyright {
+  padding: 2rem;
+  font-family: "Goldman", cursive;
+  color: white;
+}
+/* ---End-social-links--- */
+/* .navbar {
+  display: flex;
+} */
+
+/* ---PAGE CONNEXION--- */
+
+.form {
+  display: flex;
+  color: white;
+  display: grid;
+  margin: 2.5rem;
+}
+
+/* ----PAGE CONTACT---- */
+.form-control {
+  display: grid;
+  color: white;
+}
